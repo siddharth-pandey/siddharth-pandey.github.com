@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hello World!
+title: Siddharth Pandey - Software Developer
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
