@@ -21,11 +21,11 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <!-- <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all"> -->
     
-    <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="{{ ASSET_PATH }}/bootstrap/css/main.css">
+        <script src="{{ ASSET_PATH }}/bootstrap/scripts/vendor/modernizr-2.6.2.min.js"></script>
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -69,9 +69,9 @@
 
     </div> <!-- /container -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/bootstrap/scripts/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="{{ ASSET_PATH }}/bootstrap/scripts/app/plugins.js"></script>
+        <script src="{{ ASSET_PATH }}/bootstrap/scripts/app/author.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--<script>
