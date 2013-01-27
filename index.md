@@ -9,7 +9,7 @@ tagline:
 <ul class="thumbnails">
               <li class="span3">
                 <div class="thumbnail">
-                  <img alt="Profile Image" style="" src="http://placehold.it/350x250"><!-- width: 300px; height: 200px; -->
+                  <img alt="Profile Image" style="" src="portfolioimage.jpg"><!-- width: 300px; height: 200px; -->
                   <div class="caption">
                     <h4>Hey! I am Sid</h4>
                     <p>I am a student for life &amp; an amateur software engineer.</p>

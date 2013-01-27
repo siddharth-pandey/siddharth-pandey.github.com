@@ -2,8 +2,8 @@
 layout: post
 title: "Does your code communicate with other Developers?"
 description: ""
-category: 
-tags: [Development WorkFlow]
+category : 
+tags: [.NET, C#, Coding Style, CSS3, HTML5, JavaScript]
 ---
 {% include JB/setup %}
 
