@@ -65,5 +65,65 @@
 // Utility classes
 @import "base/utilities.less"; // Has to be last to override when necessary
 
-body { padding-top: 60px; padding-bottom: 40px; }
+body { 
+
+@media (min-width: 980px)
+	{padding-top: 60px; padding-bottom: 40px; }
+
+//socialicons
+.socialicons{
+
+	a{
+		font-size: 2em;
+		margin: 1em 0.5em;
+		color:#999;
+	}
+
+	:hover{
+		color: #4d4d4d;
+	}
+}
+
+//.postspreview on homepage
+.postspreview{
+	ul{
+
+		li{
+			list-style: none;
+
+			a{
+				color: @fontColorForPostHeadings;
+				font-size: 2em;
+				text-decoration: none;
+			}
+		}
+	}
+	hr{
+		margin-top:0;
+	}
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
