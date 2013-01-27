@@ -32,9 +32,3 @@ Thus, we should start following a style guide. Following are the few style guide
 <li><a href="http://www.tiobe.com/content/paperinfo/gemrcsharpcs.pdf">http://www.tiobe.com/content/paperinfo/gemrcsharpcs.pdf</a>&nbsp;<i>Phillips Medical Systems - Coding Standard C#.</i></li>
 </ol>
 You can opt one and start extending it. Also, you might also have some experience or resources under your arsenal :D which you can share with team members.</div>
-```javascript
-    $(function(){
-    alert("sid");
-
-    });
-```
