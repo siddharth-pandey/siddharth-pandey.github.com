@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hello Sid"
+title: "The Building Blocks of JavaScript Programs"
 description: ""
 category: 
 tags: [JavaScript]
