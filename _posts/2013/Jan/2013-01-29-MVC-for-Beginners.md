@@ -3,7 +3,7 @@ layout: post
 title: "MVC for Beginners"
 description: ""
 category: 
-tags: [start]
+tags: [MVC, C#, ASP.NET]
 ---
 {% include JB/setup %}
 
