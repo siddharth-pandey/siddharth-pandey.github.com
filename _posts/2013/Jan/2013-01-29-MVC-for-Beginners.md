@@ -30,11 +30,14 @@ The ASP.NET MVC term means Model View Controller and this a application design p
 8. The MVC runs on top of the core ASP.NET runtime. So, if you are already aware of ASP.NET modules, caching, handlers and diagnostics that will be very helpful for you to work with MVC environment. 
 9. The MVC framework is designed for extensibility. Say suppose, if you don't like any default behaviour, you will be able to extend it depending on your needs as the MVC environment is very flexible.
 10. Another goal of MVC is of being testable. We will see the advantage of the testing features that this desing pattern offers later in this post.
+ 
 * * *
-
+    
 ### Changing a View
 If you run your application, and hover or click on About menu Item, you will find that the linked page with that item is "~/Home/About" which means that this request will go to that Home controller and will call a public action method named About(). See the *naming convention* in the code below which is from Controllers folder - HomeController.cs:
-{% highlight C# %}
+
+<pre>
+<code>
 public class HomeController : Controller
     {
         public ActionResult Index()
@@ -58,11 +61,13 @@ public class HomeController : Controller
             return View();
         }
     }
-{% endhighlight %}
+    </code>
+</pre>
 
 If you place the breakpoint on About(), and if you click on About menu item, you will find that the control comes on that method and it will go on executing that method, which returns a View. The term **ActionResult** is a type of action result that MVC framework expects and we are saying it to return a view in this case. For example, we might ask the About() to return some JSON data, etc. 
 
 So, we are asking About() to render a View but which one? We have some naming conventions for views also. The return statement searches the folder named as Views > Home (which is the same as the name of the controller above) > it then searches for a view file with an extension of '.cshtml' named as About i.e. About.cshtml (which is the same as About()). So, this view will be rendered as html head title body html and will be sent to the browser.
+
 * * *
 
 ### Using ViewBag
@@ -72,6 +77,7 @@ ViewBag is a dynamically typed object which means we can add any sort of propert
 So, if we want to create a new property using ViewBag inside our Controller, we can write: 
 
 <pre>
+<code>
 	public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";
@@ -79,13 +85,16 @@ So, if we want to create a new property using ViewBag inside our Controller, we 
 
             return View();
         }
+        </code>
 </pre>
 
 To display this new piece of information in our view, we can write the following in our About.cshtml and give styling to it:
 
 <pre>
+<code>
 @ViewBag.Message
 You are from - @ViewBag.Location
+</code>
 </pre>
 
 So, this is one of the approach of controller building some data or information and giving it to the view using ViewBag in order to display that to the user. 
