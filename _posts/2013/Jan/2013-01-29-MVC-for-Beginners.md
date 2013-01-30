@@ -34,7 +34,7 @@ The ASP.NET MVC term means Model View Controller and this a application design p
 
 ### Changing a View
 If you run your application, and hover or click on About menu Item, you will find that the linked page with that item is "~/Home/About" which means that this request will go to that Home controller and will call a public action method named About(). See the *naming convention* in the code below which is from Controllers folder - HomeController.cs:
-<pre>
+{% highlight C# %}
 public class HomeController : Controller
     {
         public ActionResult Index()
@@ -58,7 +58,7 @@ public class HomeController : Controller
             return View();
         }
     }
-</pre>
+{% endhighlight %}
 
 If you place the breakpoint on About(), and if you click on About menu item, you will find that the control comes on that method and it will go on executing that method, which returns a View. The term **ActionResult** is a type of action result that MVC framework expects and we are saying it to return a view in this case. For example, we might ask the About() to return some JSON data, etc. 
 
