@@ -17,6 +17,8 @@ You can use [Web Platform Installer](http://www.google.com), a tool from Microso
 ### Create a New Project
 I am using Visual Studio 2012 Ultimate edition for this series. Create a new project, by opening the Visual Studio, Go to File - New - Project, Select Web as a category from the left side bar and then choose either MVC 3/4 Web Application Template. I have selected MVC 4 and in the next screen, click Internet applicaiton if you want to have a basic website out of the box or Empty, if you don't want anything and start from the scratch. It is good to start with Internet Applicaiton. Now, if you run this application, you will be amazed by looking at a working website which you can play around. I have named my application as FoodReviewMVCApp. You can give any name you like. Also, for now we have selected Razor as view engine which we will discuss later in this series in more detail.
 
+***
+
 ### Understanding the ASP.NET MVC Design Goals
 The ASP.NET MVC term means Model View Controller and this a application design pattern that is being use since very long in the industry. This is mainly used, when you want to separate the responsibilites of the components in you User-Interface Layer.  
 
@@ -220,8 +222,9 @@ Another goal of MVC design pattern is to embrace the web i.e. use HTML, CSS and 
 
 ***
  
-###Summary
+### Summary
 
 In this post, we have gone through the tools that is required to work with MVC like Visual Studio, IIS Express, SQL Server, MVC Framework. We have also covered the design goals of MVC which is very important and disucssed what MVC stands for. I will be covering more in this series about MVC. And yeah, welcome to the MVC world!!!
 
+##### [Download Link for this project](#)
 <br/><br/>
