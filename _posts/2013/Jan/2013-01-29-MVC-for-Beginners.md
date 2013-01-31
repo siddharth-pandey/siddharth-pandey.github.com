@@ -29,7 +29,7 @@ The ASP.NET MVC term means Model View Controller and this a application design p
 7. If you run your application and view the page source, you will find a very clean html stucture in the page. MVC pattern has the goal of embracing the web as when you working with MVC design pattern, you are expected to work with HTML, CSS and JavaScript.
 8. The MVC runs on top of the core ASP.NET runtime. So, if you are already aware of ASP.NET modules, caching, handlers and diagnostics that will be very helpful for you to work with MVC environment. 
 9. The MVC framework is designed for extensibility. Say suppose, if you don't like any default behaviour, you will be able to extend it depending on your needs as the MVC environment is very flexible.
-10. Another goal of MVC is of being testable. We will see the advantage of the testing features that this desing pattern offers later in this post.
+10. Another goal of MVC is to be testable. We will see the advantage of the testing features that this desing pattern offers later in this post.
  
 * * *
     
@@ -66,7 +66,7 @@ public class HomeController : Controller
 
 If you place the breakpoint on About(), and if you click on About menu item, you will find that the control comes on that method and it will go on executing that method, which returns a View. The term **ActionResult** is a type of action result that MVC framework expects and we are saying it to return a view in this case. For example, we might ask the About() to return some JSON data, etc. 
 
-So, we are asking About() to render a View but which one? We have some naming conventions for views also. The return statement searches the folder named as Views > Home (which is the same as the name of the controller above) > it then searches for a view file with an extension of '.cshtml' named as About i.e. About.cshtml (which is the same as About()). So, this view will be rendered as html head title body html and will be sent to the browser.
+So, we are asking About() to render a View but which one? We have some naming conventions for views also. The return statement searches the folder named as Views > Home (which is the same as the name of the controller above) > it then searches for a view file with an extension of `.cshtml` named as About i.e. About.cshtml (which is the same as About()). So, this view will be rendered as html head title body html and will be sent to the browser.
 
 * * *
 
@@ -98,9 +98,130 @@ You are from - @ViewBag.Location
 </pre>
 
 So, this is one of the approach of controller building some data or information and giving it to the view using ViewBag in order to display that to the user. 
+***
 
 ### Using Strongly Typed Model
-### Understanding Routes
 
+Every MVC application in Visual Studio will give you a Models folder that you can use to create  viewmodel for your views but in reality the models can live anywhere like in any other project. As such we are developing a website where users can read reviews for restaurants, we will create a new class inside Models folder and name it as 'RestaurantReview.cs'. 
 
+Now, we will create two properties for our viewmodel, Name and Ratings like this:
 
+<pre>
+	<code>
+	 public class RestaurantReview
+    {
+        /// <summary>
+        /// Name of the Restaurant
+        /// </summary>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Rating for the Restaurant
+        /// </summary>
+        public int Rating { get; set; }
+    }
+	</code>
+</pre>
+
+Now, say suppose, if the user goes to url like '/Home/Index' or '/Home/', we want to display a list of reviews and the names of the restaurant to the user. In a real case scenario, we would be using a database to store our data and then fetching the data as and when we need but not we will write the following in HomeController.cs. Read the comments for more information below:
+
+<pre>
+	<code>
+	public ActionResult Index()
+        {
+            ViewBag.Message = "Your app description page.";
+            ViewBag.Location = "United Kingdom";
+
+            //Instead of this viewModel, we would be using a database in real scenario, to fetch the names and ratings for restaurants. But for now, just use this.
+            var viewModel = new RestaurantReview()
+            {
+                Name = "Nandoos",
+                Ratings = 4
+            };
+
+            //And we are telling the About() action to return a view with viewModel that we have just created. This is a way to giving the restaurant information from a
+            //database or hard-coded values in this case to the view.
+            return View(viewModel);
+        }
+	</code>
+</pre>
+
+Now open the Index.cshtml under views - Home folder. Every razor view will have a Model property by default which we can use to show the information that we have in our viewModel. So, models or viewmodels are kind of same as ViewBag and dynamic too, so you can use those to access the data that you have passed in the properites of your viewmodel inside the controller as shown in the sample code above. To access the names and ratings, we will use `@Model` in our view like this:
+
+<pre>
+	<code>
+        Restaurant Name: @Model.Name
+		Ratings: @Model.Ratings
+	</code>
+</pre>
+
+If you now run the application after saving all your work, you will be able to see the Nandoos as name and 4 as rating on the Index page as defined under Home controller.
+
+**Another way to bind view with the model**
+
+Use `@model` directive at the top of the view to tell razor, the type of the model that we want to bind with our view. So the below code, i.e. the Model RestaurantReview will be used as the generic type parameter for our @Model property. This is what we called a **strongly typed Model approach**. So, if you now type `@Model.`, you will get intellisense to select either of the Name or Ratings. So, now our view look like this:
+
+<pre>
+	<code>
+	//This should be at the top of our view
+	@model FoodReviewMVCApp.Models.RestaurantReview
+
+	@{
+    	ViewBag.Title = "Home Page";
+	}
+
+	Restaurant Name: @Model.Name
+    Ratings: @Model.Ratings
+
+	</code>
+</pre>
+
+Now, this view expects the controller to pass RestaurantReview model and we can check whether the controller is doing this correctly or not using Unit Testing. 
+
+***
+
+### Unit Testing
+As one of the design goals of MVC design pattern is to be testable, specifically, your controllers should be testable. Unfortunately, there are no test tools available in Visual Studio Express edition but there are many open source projects available that allow you to write unit tests.
+
+For Unit testing, we will add a new class library project to the same solution. So, go to File - New Project - Select Windows from left-hand sidebar and choose class library as template that just produces a dll (not a ui or produce html head title body html output) and give it a name as `FoodReviewMVCApp.Tests`.
+
+Now we will use Nuguet Package Manager, a tool to install different open source or other projects (dependencies) in your own project. And search for NUnit, a unit-testing framework. Also, add reference to the FoodReviewMVCApp project to this test project so as to use it. We also need to refer to `System.Web.MVC` dll in our test project as we are going to use some types defined in this assembly. Now, rename the Class.cs to HomeControllerIndexTests.cs or just create a new one with the same name, by which I mean to say we are going to test Index action under Home controller.
+
+Also, note that I am changing the return type of Index action in HomeController.cs from `ActionResult` to `ViewResult` to be more specific as we want to return view. It inherits ActionResult by inheriting ViewResultBase class. 
+
+<pre>
+	<code>
+		public ViewResult Index()
+        {
+        	//rest of the code here is same as above 
+        }	
+	</code>
+</pre>
+
+Now you have two option to run this test:
+1. Either use the NUnit GUI application that you can find under package folder - NUnit - Tools under your solution and opening the dll of your test application inside it.
+2. You can also use a nunit-console.exe and pass the path of dll to this exe and this will use the console to give the results.
+
+You need to run the test everytime you write something and want to test it. So, if you want you can add a post-build event and the test will run for you. Right-click the FoodReviewMVCApp and select Properties. Then select - Build Events and write under Post-Build event command line:
+
+<pre>
+	<code>
+		$(SolutionDir)\packages\NUnit.xxx\tools\nunit-console $(TargetPath)
+	</code>
+</pre>
+
+The above code has been created by using the macros feature that you can add from Post-Build event GUI - Edit Post Build. Replace the `.xxx` with the NUnit version you have installed. Now the errors will be shown in the error list inside Visual Studio and the exception/success messages will be displayed in the Output windows inside Visual Studio. Now, as you can see the test is now automated and most of the unit test frameworks will work in the same manner.
+
+***
+
+### Styling and JavaScript in MVC
+
+Another goal of MVC design pattern is to embrace the web i.e. use HTML, CSS and JavaScript. Views is all about HTML and using it as a template to display it to the user. `Content` is the folder where all your styling of the application, i.e. css, less, scss should reside. And Scripts is the folder where all the javascripts like the ones written by you or any vendor or any plugin scripts.
+
+***
+ 
+###Summary
+
+In this post, we have gone through the tools that is required to work with MVC like Visual Studio, IIS Express, SQL Server, MVC Framework. We have also covered the design goals of MVC which is very important and disucssed what MVC stands for. I will be covering more in this series about MVC. And yeah, welcome to the MVC world!!!
+
+<br/><br/>
