@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo - touch events</title>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.2.0/jquery.mobile.min.js"></script>
+	<style>
+		.wrapper {
+    margin:  auto;
+    width: 300px;
+    padding: 5em 0;
+}
+.callout {
+    padding: 2em;
+    border: 1px solid #999;
+    color: black;
+    border-radius: 15px;
+
+
+}
+
+.firstview{
+	background: #9cabf3;
+}
+
+.secondview{
+
+	background: #8ab7ee;
+}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="firstview callout">
+			<p>This is the landing page as well as the first view of controls that you
+                    want to show to the users</p>
+		</div>
+		<br>
+		<div class="secondview callout">
+			<p>This is the second view that you want to show to the users.</p>
+		</div>
+	</div>
+</body>
+</html>
+	
+	<script>
+	if(Modernizr.touch)
+	{
+		alert(Modernizr.touch);
+			$('.secondview').hide();
+$(document).bind('swipeleft', function () {
+    $('.firstview').hide();
+    $('.secondview').fadeIn();
+
+});
+
+$(document).bind('swiperight', function () {
+    $('.secondview').hide();
+    $('.firstview').fadeIn();
+
+});
+}
+	</script>
