@@ -18,5 +18,5 @@ Install-Package EFCodeFirst.SqlServerCompact
 	</code>
 </pre>
 
-Ta da – no more external database required. Run your project again `(Shift-F5)` and this time it will create and connect to a file-based database `(a .sdf file will appear in your ~/App_Data folder)`. The EFCodeFirst.SqlServerCompact package adds a file to your project called `AppStart_SQLCEEntityFramework.cs`, which configures the runtime to use SQL CE.
+Ta da – no more external database required. Run your project again (Shift-F5) and this time it will create and connect to a file-based database (a .sdf file will appear in your ~/App_Data folder). The EFCodeFirst.SqlServerCompact package adds a file to your project called AppStart_SQLCEEntityFramework.cs, which configures the runtime to use SQL CE.
 Of course you probably still want the proper version of SQL Server when you eventually deploy your application for public use, but for small applications or for learning, SQL CE is really handy.
