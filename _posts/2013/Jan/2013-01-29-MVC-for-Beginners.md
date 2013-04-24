@@ -226,5 +226,4 @@ Another goal of MVC design pattern is to embrace the web i.e. use HTML, CSS and 
 
 In this post, we have gone through the tools that is required to work with MVC like Visual Studio, IIS Express, SQL Server, MVC Framework. We have also covered the design goals of MVC which is very important and disucssed what MVC stands for. I will be covering more in this series about MVC. And yeah, welcome to the MVC world!!!
 
-##### [Download Link for this project](#)
 <br/><br/>
