@@ -28,8 +28,6 @@ Both has different approach to deliver some code. Programmers will write the cod
 
 **Languages Don't Matter**
 
-* * *
-
 We discuss a lot about the languages that we use like pros and cons or which is better c# or vb.net or someone might say python/ruby/PHP/javascript is good, etc. But the point is, Languages Don't Matter.
 Programmers care about individual languages and 
 Software developers care about language characteristics:
@@ -56,18 +54,14 @@ From technical perspective, A is the better choice. But you should choose B, as 
 
 **Formal Education**
 
-***
-
 There are some important points like software development life cycle, what to ask before starting a project, how to learn  a computer language and just not use it to complete a project, etc. One can learn all this by having a good experience but a formal education in college and universities, a graduate is more close to become a software developer.
 Going to college or university has many advantages. You might find yourself creating a network of friends which is another source of learning and enjoying! It also gives you credibility i.e. your education provider gives you a certificate at the end of your course that you have learned a particular module or subject and this will show to your future employers about your abilities. It is also common to not to join a college for a degree and start working directly in this industry but to have a better knowledge about this industry, one should attend a degree course from college or university.
 
 **Which School is Best?**
-***
 
 For computer science at undergraduate level, they all teach the same thing. They use the same resources, text-books. So, choose the course wisely like don't go to a college where they are teaching computer programming instead go for computer science. Employers are keen to know where you did your graduation from but in this industry this is not that important as once you get your first job, they only want to know what you did in your job. You should ignore the college rankings.
 
 **So, What does Matter?**
-***
 
 Go somewhere you like (culture and atmosphere)
 Look for Reasonable cost. (Fees for the course, living cost, etc)
@@ -75,7 +69,6 @@ Consider the level of competition
 Location and Industry connections (As local organisations will be interested to invite students to join them or placement or internships, etc)
 
 **Building a Foundation**
-***
 
 There are some facts that everyone needs to know and remember we all are in the same boat:
 You can't know everything.
@@ -88,7 +81,6 @@ Learning on demand
 The last two points above are very important. Say suppose you searching for a code sample to work with A and B as technology. You might find a code that works and you just use it by modifying some lines of code as per your need. But wait, this is the best time to learn about the fundamentals of those technologies or languages A and B. This will help you to learn about them and making your own solution. Also, if you practise this in your daily routine, you can be a just-in time programmer.
 
 **Resources**
-***
 
 Where can you go to learn technologies? In college...? No, going back to college again is not the answer.
 Classes (schools or training companies) - but they might not be working in real environment to deliver production code.
@@ -105,7 +97,6 @@ Depth - specialise in targeted subjects as needed
 Don't let your specialisation become your identity. As in our field, all technologies have a time frame and you might not find your specialised technology to be as good in the market as it was 8 years before.
 
 **Choosing Technologies**
-***
 
 If you are an employee, you management might have the preference to select a technology or if you are an consultant, your client might have the preference to do so. But it is important for you to decide, which technologies, you want to work with.
 The key is to look at the supply and demand.
