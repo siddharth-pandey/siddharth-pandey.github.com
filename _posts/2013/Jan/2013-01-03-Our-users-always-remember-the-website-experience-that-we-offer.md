@@ -21,8 +21,8 @@ When we create a website or any web solution for our users, we can’t guarantee
 
 The best way to understand is to replace water with our websites and water’s container with device browser. I was working on a single page, just to demonstrate you a sample of website that is responsive. I have not spend any minute for the designing or for actual content because that will take a much amount of time and is not needed for this instance. Again, I would like you see and tell me about your experience by going through URLs below
 
-- [Prototype 1](http://siddharth-pandey.github.com)
-- [Prototype 2](aquotebike.testquote.co.uk)
+- [Prototype 1](http://www.responsinator.com/?url=aquotebike.testquote.co.uk%2F)
+- [Prototype 2](http://www.responsinator.com/?url=siddharth-pandey.github.com)
 
 The above prototype contains all User-Interface elements that we need like a form, slide show, images, navigation, header, footer, sample paragraph, etc. 
 
