@@ -20,7 +20,6 @@ Thus, we should start following a style guide. Following are the few style guide
 - [Necolas CSS Guide](https://github.com/necolas/idiomatic-css) 
 - [Style Guide](https://github.com/styleguide/) 
 - [Microsoft - Design Guidelines for Class Library Developers](http://msdn.microsoft.com/en-us/library/ms229042.aspx)
-- [IDesign C# Coding Standard](http://www.idesign.net/idesign/download/IDesign%20CSharp Coding Standard.zip)
 - [Dan Rigsby C# Coding Standards](http://www.danrigsby.com/Files/csharpcodingstandards.doc)
 - [SubMain C# / VB.NET Coding Guidelines](http://submain.com/products/guidelines.aspx)
 - [Lance Hunt - C# Coding Standards](http://weblogs.asp.net/lhunt/archive/2004/08/17/CSharpCodingStandardsv113.aspx)
