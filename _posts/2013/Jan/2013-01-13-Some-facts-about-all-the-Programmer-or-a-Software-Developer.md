@@ -27,7 +27,7 @@ Many others...
 Both has different approach to deliver some code. Programmers will write the code for a problem and software developers will deliver the solution by sometimes writing the code. 
 
 **Languages Don't Matter**
-***
+* * *
 
 We discuss a lot about the languages that we use like pros and cons or which is better c# or vb.net or someone might say python/ruby/PHP/javascript is good, etc. But the point is, Languages Don't Matter.
 Programmers care about individual languages and 
