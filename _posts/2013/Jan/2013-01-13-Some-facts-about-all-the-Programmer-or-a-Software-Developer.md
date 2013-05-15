@@ -27,6 +27,7 @@ Many others...
 Both has different approach to deliver some code. Programmers will write the code for a problem and software developers will deliver the solution by sometimes writing the code. 
 
 **Languages Don't Matter**
+
 * * *
 
 We discuss a lot about the languages that we use like pros and cons or which is better c# or vb.net or someone might say python/ruby/PHP/javascript is good, etc. But the point is, Languages Don't Matter.
@@ -54,6 +55,7 @@ Which one would you go for?
 From technical perspective, A is the better choice. But you should choose B, as it is good for long term cycle of your system.
 
 **Formal Education**
+
 ***
 
 There are some important points like software development life cycle, what to ask before starting a project, how to learn  a computer language and just not use it to complete a project, etc. One can learn all this by having a good experience but a formal education in college and universities, a graduate is more close to become a software developer.
