@@ -116,7 +116,7 @@ JB :
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:
   #
-    pages_list : 8
+    pages_list : '8'
       provider : "custom"   
   #
   # Setting any helper's provider to 'custom' will bypass the helper code
