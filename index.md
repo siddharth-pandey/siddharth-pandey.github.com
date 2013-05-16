@@ -51,7 +51,7 @@ tagline:
 <div class="span9">
   <div class="postspreview">
   <ul>
-    {% for post in site.posts limit:10 %}
+    {% for post in site.posts limit:7 %}
     <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> &raquo; <span>{{ post.date | date_to_string }}</span> </li>
         {{ post.content | strip_html | truncatewords:50}} <br/><a href="{{ post.url }}" class="btn pull-right">Read more &raquo;</a><br/><br/>
     <hr/>
