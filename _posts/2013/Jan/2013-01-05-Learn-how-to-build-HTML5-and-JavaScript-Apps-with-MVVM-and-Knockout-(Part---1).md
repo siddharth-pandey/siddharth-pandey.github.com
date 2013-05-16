@@ -57,9 +57,9 @@ The important factor is to understand the MVVM in terms of Knockout: the separat
 
 **Demo**
 
-[A quick demo using JavaScript's object literal notation](http://codepen.io/siddharth-pandey/full/tcuob)
-[A quick demo using JavaScript's function](http://codepen.io/siddharth-pandey/full/dsmtH)
-[A quick demo](http://a%20quick%20demo%20using%20javascript%27s%20function/)
+- [A quick demo using JavaScript's object literal notation](http://codepen.io/siddharth-pandey/full/tcuob)
+- [A quick demo using JavaScript's function](http://codepen.io/siddharth-pandey/full/dsmtH)
+- [A quick demo](http://a%20quick%20demo%20using%20javascript%27s%20function/)
 
 **Visual Studio Extensions for your productivity**
 
