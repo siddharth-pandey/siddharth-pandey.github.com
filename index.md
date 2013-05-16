@@ -58,23 +58,20 @@ tagline:
     {% endfor %}
   </ul>
 </div>
-<div class="pagination">
-  <span class="previous">
-    {% if site.previous_page %}
-      {% if site.previous_page == 1 %}
-      <a href="/blog.html" title="Previous Page">&laquo; Previous</a>
-      {% else %}
-      <a href="/page{{ paginator.previous_page }}/" title="Previous Page">&laquo; Previous</a>
-      {% endif %}
-    {% endif %}
-  </span>
-  <span class="next">
-    {% if site.next_page %}
-    <a href="/page{{ paginator.next_page }}/" title="Next Page">Next &raquo;</a>
-    {% endif %}
-  </span>
 </div>
-</div>
+<!-- Pagination links -->
+<nav class="pagination">
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+      <a href="/" class="previous">&laquo;</a>
+    {% else %}
+      <a href="/page{{paginator.previous_page}}" class="previous">&laquo;</a>
+    {% endif %}
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="/page{{paginator.next_page}}" class="next ">&raquo;</a>
+  {% endif %}
+</nav>
 </div>
 
 
