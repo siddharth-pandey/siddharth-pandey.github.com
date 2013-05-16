@@ -11,21 +11,21 @@ To avoid you from having to chase for the same information: here's how you extra
 
 <pre>
 	<code>
-		public ActionResult Create(FormCollection formCollection)
-		{
+	public ActionResult Create(FormCollection formCollection)
+	{
 
-		   foreach (var key in formCollection.AllKeys)
-		   {
-		      var value = formCollection[key];
-		      // etc.
-		   }
+	   foreach (var key in formCollection.AllKeys)
+	   {
+	      var value = formCollection[key];
+	      // etc.
+	   }
 
-		   foreach (var key in formCollection.Keys)
-		   {
-		       var value = formCollection[key.ToString()];
-		       // etc.
-		   }
-		}
+	   foreach (var key in formCollection.Keys)
+	   {
+	       var value = formCollection[key.ToString()];
+	       // etc.
+	   }
+	}
 	</code>
 </pre>
 
