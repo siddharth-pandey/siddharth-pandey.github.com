@@ -60,8 +60,8 @@ tagline:
 </div>
 <div class="pagination">
   <span class="previous">
-    {% if page.previous_page %}
-      {% if page.previous_page == 1 %}
+    {% if site.previous_page %}
+      {% if site.previous_page == 1 %}
       <a href="/blog.html" title="Previous Page">&laquo; Previous</a>
       {% else %}
       <a href="/page{{ paginator.previous_page }}/" title="Previous Page">&laquo; Previous</a>
@@ -69,7 +69,7 @@ tagline:
     {% endif %}
   </span>
   <span class="next">
-    {% if page.next_page %}
+    {% if site.next_page %}
     <a href="/page{{ paginator.next_page }}/" title="Next Page">Next &raquo;</a>
     {% endif %}
   </span>
