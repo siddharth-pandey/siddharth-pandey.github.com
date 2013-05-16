@@ -9,21 +9,25 @@ tags: [ASP.NET, C#, MVC]
 
 To avoid you from having to chase for the same information: here's how you extract key / value pairs from the FormCollection that comes as an argument in an ASP.NET MVC action method:
 
-`public ActionResult Create(FormCollection formCollection)
-{
+<pre>
+	<code>
+		public ActionResult Create(FormCollection formCollection)
+		{
 
-   foreach (var key in formCollection.AllKeys)
-   {
-      var value = formCollection[key];
-      // etc.
-   }
+		   foreach (var key in formCollection.AllKeys)
+		   {
+		      var value = formCollection[key];
+		      // etc.
+		   }
 
-   foreach (var key in formCollection.Keys)
-   {
-       var value = formCollection[key.ToString()];
-       // etc.
-   }
-}`
+		   foreach (var key in formCollection.Keys)
+		   {
+		       var value = formCollection[key.ToString()];
+		       // etc.
+		   }
+		}
+	</code>
+</pre>
 
 Also, a final tip: If you find that the formCollection does not contain the key/value pairs you expected, check that 
 Your controls reside within the correct form (you can have more than one)
