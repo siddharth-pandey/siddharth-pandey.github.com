@@ -59,19 +59,6 @@ tagline:
   </ul>
 </div>
 </div>
-<!-- Pagination links -->
-<nav class="pagination">
-  {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-      <a href="/" class="previous">&laquo;</a>
-    {% else %}
-      <a href="/page{{paginator.previous_page}}" class="previous">&laquo;</a>
-    {% endif %}
-  {% endif %}
-  {% if paginator.next_page %}
-    <a href="/page{{paginator.next_page}}" class="next ">&raquo;</a>
-  {% endif %}
-</nav>
 </div>
 
 
