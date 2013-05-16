@@ -52,10 +52,6 @@ Now, we will learn some building blocks the bits and pieces, that one should kno
 - But when undefined is used in any boolean expression like in case of a if condition, it evaluates to false.
 - **The working demo for this post is [here](http://codepen.io/siddharth-pandey/full/Fxdol).**
 
-**Finding Help**
-
-- [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/JavaScript)
-
 **Objects**
 
 - Everything in JavaScript is an object except for the simple types like string, number, boolean, null and undefined.
@@ -82,4 +78,8 @@ Now, we will learn some building blocks the bits and pieces, that one should kno
 		- Use `===` over `==` and `!==` over `!=` as it gives a proper answer comparing value and the type. Although, the decision is yours. 
 - **The working demo for this post is [here](http://codepen.io/siddharth-pandey/full/Fxdol).**
  
+**Finding Help**
+
+- [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/JavaScript)
+
  **Happy Learning!**
