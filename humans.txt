@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    <name>Siddharth Pandey (Sid) <role> Web Design/Developer <twitter>
 
 # THANKS
 

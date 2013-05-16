@@ -1,1 +1,1 @@
-yhjyh
+This is my static site and where I write posts sometimes.
